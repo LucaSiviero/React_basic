@@ -1,0 +1,31 @@
+.header {
+    height: 4em;
+    background-color: rgba(0, 36, 83, 0.863);
+}
+
+.header_logo {
+    height: 3.5em;
+    border-radius: 10px;
+    margin-left: 1em;
+    margin-top: 0.25em;
+}
+
+.header_home_redirect {
+    color: aliceblue;
+    text-decoration: none;
+    float: right;
+    margin-right: 1em;
+    margin-top: 1.25em;
+}
+
+.header_redirect {
+    color: aliceblue;
+    text-decoration: none;
+    float: right;
+    margin-right: 1em;
+    margin-top: 1.25em;
+}
+
+.header>img {
+    height: 50px;
+}
