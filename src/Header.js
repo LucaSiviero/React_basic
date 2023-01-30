@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css';
 import { useLocation } from 'react-router-dom';
-import { useState, useEffect } from "react";
 
 function Header() {
 
@@ -12,6 +11,9 @@ function Header() {
         <div className='header'>
             <a href='/'>
                 <img src="logo.png" className='header_logo' alt='' />
+            </a>
+            <a href='/login' className='login_redirect'>
+                <p>Log in</p>
             </a>
             {path === '/products' ? (
                 <a href='/cart' className='header_redirect'> Go to Cart</a>

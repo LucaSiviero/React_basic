@@ -29,3 +29,12 @@
 .header>img {
     height: 50px;
 }
+
+.login_redirect {
+    color: aliceblue;
+    position: absolute;
+    text-decoration: none;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 0.3em;
+}

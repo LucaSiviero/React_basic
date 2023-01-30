@@ -3,7 +3,6 @@ import './Product.css'
 
 const Cart = () => {
 
-
     useEffect(() => {
         const storedCart = localStorage.getItem("cart");
         if (storedCart) {
@@ -36,7 +35,7 @@ const Cart = () => {
                             <div className='product_card'>
                                 {console.log(product)}
                                 <h3>{product.name} </h3>
-                                <img src={product.img}></img>
+                                <img src={product.img} alt=''></img>
                                 <p><strong>{product.price}</strong>€</p>
                                 <p>{product.description}</p>
 

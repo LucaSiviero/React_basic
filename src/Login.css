@@ -1,0 +1,45 @@
+.form {
+    max-width: 22em;
+    border-radius: 5px;
+    border: 5px;
+    box-shadow: 0px 0px 10px #0000003f;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+    text-overflow: ellipsis;
+    position: relative;
+    width: 50%;
+    /* larghezza del div */
+    height: 50%;
+    /* altezza del div */
+    top: 50%;
+    /* metà dell'altezza totale della finestra */
+    left: 50%;
+    /* metà della larghezza totale della finestra */
+    transform: translate(-50%, -50%);
+    /* per centrare il div rispetto al suo centro */
+}
+
+form {
+    margin-top: 10em;
+    text-align: center;
+}
+
+form>input {
+    display: flex;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+form>button {
+    background-color: rgba(4, 138, 228, 0.582);
+    border-radius: 10px;
+    border-color: rgba(4, 138, 228, 0.582);
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 5em;
+    text-align: center;
+    margin-bottom: -3em;
+}
