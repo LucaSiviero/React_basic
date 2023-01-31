@@ -6,6 +6,7 @@ import Product from './Product';
 import Header from './Header';
 import UserProfile from './UserProfile';
 import Login from './Login';
+import Signup from './Signup';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/products' element={[<Header />, <Product />]} />
           <Route path='/profile' element={[<Header />, <UserProfile />]} />
           <Route path='/login' element={[<Header />, <Login />]} />
+          <Route path='/signup' element={[<Header />, <Signup />]} />
         </Routes>
       </div>
     </Router>

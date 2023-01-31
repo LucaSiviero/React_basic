@@ -38,3 +38,25 @@
     margin-left: 1em;
     margin-top: 0.3em;
 }
+
+
+.signup_redirect {
+    color: aliceblue;
+    position: absolute;
+    text-decoration: none;
+    margin-right: 1em;
+    margin-left: 5em;
+    margin-top: 0.3em;
+}
+
+.logout_redirect {
+    position: absolute;
+    text-decoration: none;
+    color:aliceblue;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 0.3em;
+}
+.logout_redirect:hover {
+    cursor:pointer
+}

@@ -23,18 +23,27 @@ const Cart = () => {
         setCart(newCart);
     };
 
-    console.log(cart)
+    function getTotal(cart) {
+        let total = 0;
+        cart.map((product) => (
+            total += product.price
+        ))
+
+        return total.toFixed(2);
+    }
+
 
     return (
         <>
-            <h2 className="info_header">Cart: {cart.length}</h2>
-
+            <div className="cart_details">
+                <h2 className="info_header">Cart: {cart.length}</h2>
+                <h2 className="info_header"> Total: <strong>{getTotal(cart)}</strong>€</h2>
+            </div>
             <div className='products'>
                 <ul>
                     {cart.map((product, index) => (
                         <li key={index}>
                             <div className='product_card'>
-                                {console.log(product)}
                                 <h3>{product.name} </h3>
                                 <img src={product.img} alt=''></img>
                                 <p><strong>{product.price}</strong>€</p>

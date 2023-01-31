@@ -18,14 +18,12 @@ function Product() {
 
     useEffect(() => {
         axios.get("http://localhost:8080/api/v1/showProducts").then(response => {
-            console.log(response.data);
             setProducts(response.data)
         }).catch(error => {
             console.log(error);
         })
     }, []);
 
-    console.log(products);
 
     const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
     const [cart, setCart] = useState([...initialCart]);
@@ -51,7 +49,6 @@ function Product() {
     return (
         <>
             <h2 className='info_header'> Products</h2>
-
             <div className='products'>
                 <ul>
                     {products.map((product, index) => (

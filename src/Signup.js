@@ -1,12 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import  { useNavigate } from 'react-router-dom'
 import './Login.css';
 
 
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+function validateName(name) {
+    return /^[A-Za-z ]+$/.test(name);
 }
 
 function validatePassword(password) {
@@ -17,8 +21,9 @@ function validatePassword(password) {
 }
 
 
-const Login = () => {
+const Signup = () => {
     const [formData, setFormData] = useState({
+        name:'',
         mail: '',
         password: ''
     });
@@ -40,27 +45,41 @@ const Login = () => {
         if(!validatePassword(formData["password"])){
             alert("La password deve contenere almeno 8 caratteri")
         }
+
+        if(!validateName(formData["name"])) {
+            alert("Il campo nome può contenere solo lettere e spazi")
+        }
+        
         else {
-            axios.post("http://localhost:8080/api/v1/selectUser", formData).then(
+            axios.post("http://localhost:8080/api/v1/insertUser", formData).then(
                 res => {
                     console.log(res.data);
                     localStorage.setItem("user", JSON.stringify(formData))
                     navigate("/");
                 }
             ).catch(error => {
+                console.log("Eror")
                 console.error(error);
             });
         }
     };
-
-
     
 
     return (
         <>
-            <h2>Login</h2>
+            <h2 className='signup_header'>Signup</h2>
             <div className='form'>
                 <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
+
                     <label htmlFor="mail">Mail:</label>
                     <input
                         type="email"
@@ -88,4 +107,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;

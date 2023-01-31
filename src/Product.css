@@ -11,6 +11,7 @@ ul {
 
 .product_card {
     max-width: 22em;
+    min-width: 100px;
     border-radius: 5px;
     margin-bottom: 4em;
     border: 5px;
