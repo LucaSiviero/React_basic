@@ -50,8 +50,9 @@ function Product() {
 
     return (
         <>
+            <h2 className='info_header'> Products</h2>
+
             <div className='products'>
-                <h2> Products</h2>
                 <ul>
                     {products.map((product, index) => (
                         <li key={index}>

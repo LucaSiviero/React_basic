@@ -27,8 +27,9 @@ const Cart = () => {
 
     return (
         <>
+            <h2 className="info_header">Cart: {cart.length}</h2>
+
             <div className='products'>
-                <h2>Cart: {cart.length}</h2>
                 <ul>
                     {cart.map((product, index) => (
                         <li key={index}>
