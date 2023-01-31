@@ -7,6 +7,7 @@ import Header from './Header';
 import UserProfile from './UserProfile';
 import Login from './Login';
 import Signup from './Signup';
+import Order from './Order';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
           <Route path='/profile' element={[<Header />, <UserProfile />]} />
           <Route path='/login' element={[<Header />, <Login />]} />
           <Route path='/signup' element={[<Header />, <Signup />]} />
+          <Route path='/orders' element={[<Header />, <Order />]} />
+
         </Routes>
       </div>
     </Router>
