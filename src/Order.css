@@ -1,0 +1,34 @@
+.order_list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.order_card {
+    max-width: 22em;
+    min-width: 300px;
+    border-radius: 5px;
+    margin-bottom: 4em;
+    border: 5px;
+    box-shadow: 0px 0px 10px #0000003f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    white-space: pre-wrap;
+}
+
+.info_header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}

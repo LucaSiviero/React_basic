@@ -1,0 +1,17 @@
+.home_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_redirects {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.greetings {
+    margin-top: auto;
+}
+
+.home_redirects>a {
+    text-decoration: none;
+}

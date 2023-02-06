@@ -36,8 +36,8 @@ const Login = () => {
         if (!validateEmail(formData["mail"])) {
             alert("Email non valida");
         }
-        
-        if(!validatePassword(formData["password"])){
+
+        if (!validatePassword(formData["password"])) {
             alert("La password deve contenere almeno 8 caratteri")
         }
         else {
@@ -48,13 +48,19 @@ const Login = () => {
                     navigate("/");
                 }
             ).catch(error => {
-                console.error(error);
+                console.error(error.response["status"]);
+                switch (error.response["status"]) {
+                    case 404:
+                        alert("Log-in functionality is down at the moment. We'll fix it soon.");
+                    case 400:
+                        alert("Bad request. Input fields are not correct");
+                }
             });
         }
     };
 
 
-    
+
 
     return (
         <>
