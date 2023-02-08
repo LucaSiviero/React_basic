@@ -18,10 +18,10 @@ function Header() {
     }
 
     useEffect(() => {
-        if(user != storedUser) {
+        if (user !== storedUser) {
             window.location.reload();
         }
-    },[JSON.parse(localStorage.getItem("user"))]);
+    }, [JSON.parse(localStorage.getItem("user"))]);
 
     return (
         <div className='header'>
@@ -37,21 +37,29 @@ function Header() {
                         <p>Sign up</p>
                     </a>
                 </>
-            ): (
+            ) : (
                 <a className='logout_redirect' onClick={logout}>
                     <p>Log out</p>
                 </a>
             )}
-            
+
             {path === '/products' ? (
-                <a href='/cart' className='header_redirect'> Go to Cart</a>
+                <>
+                    <a href='/cart' className='header_redirect'> Go to Cart</a>
+                    <a href='/orders' className='header_redirect'> Go to Orders</a>
+                </>
             ) : path === '/' ? (
                 <>
                     <a href='/cart' className='header_redirect'> Go to Cart</a>
                     <a href='/products' className='header_redirect'> Go to Products</a>
+                    <a href='/orders' className='header_redirect'> Go to Orders</a>
+
                 </>
             ) : (
-                <a href='/products' className='header_redirect'> Go to Products </a>
+                <>
+                    <a href='/products' className='header_redirect'> Go to Products </a>
+                    <a href='/orders' className='header_redirect'> Go to Orders</a>
+                </>
             )}
 
         </div>
